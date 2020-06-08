@@ -21,13 +21,13 @@ export class AuthService {
     } else {
       this.usuarioAutenticado = false;
       this.emisor.emit(false);
-      this.router.navigate(['login']);
+      this.router.navigate(['/login']);
     }
   }
 
   logout() {
     this.usuarioAutenticado = false;
     this.emisor.emit(false);
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
   }
 }

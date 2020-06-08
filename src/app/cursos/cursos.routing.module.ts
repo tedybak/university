@@ -5,10 +5,12 @@ import { CursosComponent } from './cursos.component';
 import { CursoDetalleComponent } from './curso-detalle/curso-detalle.component';
 import { CursoNoEncontradoComponent } from './curso-no-encontrado/curso-no-encontrado.component';
 
+import { AuthGuard } from '../guards/auth.guard';
 const cursosRoutes: Routes = [
   {
     path: '',
     component: CursosComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: 'notfound', component: CursoNoEncontradoComponent },
       { path: ':id', component: CursoDetalleComponent },
@@ -18,6 +20,7 @@ const cursosRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(cursosRoutes)],
+
   exports: [RouterModule],
 })
 export class CursosRoutingModule {}

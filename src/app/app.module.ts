@@ -10,11 +10,13 @@ import { RouterModule } from '@angular/router';
 
 import { AuthService } from './login/auth.service';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './guards/auth.guard';
+
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, RouterModule, FormsModule],
 
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
