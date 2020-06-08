@@ -1,4 +1,13 @@
 <h3>Listado de Cursos</h3>
-<div class="collection" *ngFor="let item of data">
-  <a class="collection-item" [routerLink]="['/cursos',item.id]">{{item.nombre}}</a>
+
+<div class="row">
+  <div class="col s4">
+    <div class="collection" *ngFor="let item of data">
+      <a class="collection-item" [routerLink]="['/cursos',item.id]">{{item.nombre}}</a>
+    </div>
+  </div>
+
+  <div class="col s8">
+    <router-outlet></router-outlet>
+  </div>
 </div>
