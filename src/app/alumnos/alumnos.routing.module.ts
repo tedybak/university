@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AlumnosComponent } from './alumnos.component';
+import { AlumnoDetalleComponent } from './alumno-detalle/alumno-detalle.component';
+import { AlumnoFormComponent } from './alumno-form/alumno-form.component';
+
+const alumnosRoutes: Routes = [
+  {
+    path: '',
+    component: AlumnosComponent,
+    children: [
+      { path: 'novo', component: AlumnoFormComponent },
+      { path: ':id', component: AlumnoDetalleComponent },
+      { path: ':id/editar', component: AlumnoFormComponent },
+    ],
+  },
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(alumnosRoutes)],
+  exports: [RouterModule],
+})
+export class AlumnosRoutingModule {}

@@ -1,0 +1,9 @@
+<h1>Detalle de alumno</h1>
+
+<div *ngIf="alumno">
+  <h3>Nombre: {{alumno["nombre"]}}</h3>
+  <h3>Matricula: {{alumno["nmatricula"]}}</h3>
+  <h3 [ngClass]="{'suspenso':alumno.nota < 5}">Nota: {{alumno.nota}}</h3>
+  <h3>Curso: {{alumno.nombrecurso}}</h3>
+  <button class="btn waves-effect waves-teal" (click)="editProfile(alumno.id)">Edit</button>
+</div>

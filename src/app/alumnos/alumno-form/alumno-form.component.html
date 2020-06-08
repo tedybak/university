@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <form class="col s12" #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+      <div class="row">
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="nombre" type="text" class="validate" [(ngModel)]="data.nombre">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="nmatricula" type="text" class="validate" [(ngModel)]="data.nmatricula">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="nota" type="text" class="validate" [(ngModel)]="data.nota ">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="nombrecurso" type="text" class="validate" [(ngModel)]="data.nombrecurso">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <button class="btn waves-effect waves-teal">Send</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
