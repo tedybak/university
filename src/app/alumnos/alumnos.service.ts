@@ -9,18 +9,18 @@ export class AlumnosService {
   constructor(private router: Router, private http: HttpClient) {}
 
   getAlumnos() {
-    return this.http.get(`http://localhost:3001/alumnos`);
+    return this.http.get(`http://localhost:3000/alumnos`);
   }
 
   getAlumnoById(id) {
-    return this.http.get(`http://localhost:3001/alumnos/${id}`);
+    return this.http.get(`http://localhost:3000/alumnos/${id}`);
   }
 
-  addAlumno(alumno) {
-    return this.http.post(`http://localhost:3001/alumnos/`, alumno);
+  addAlumno(id) {
+    return this.http.get(`http://localhost:3000/notas/${id}`);
   }
 
-  patchAlumno(alumno) {
-    return this.http.patch(`http://localhost:3001/alumnos/`, alumno);
+  patchAlumno(id) {
+    return this.http.get(`http://localhost:3000/notas/${id}`);
   }
 }

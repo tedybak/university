@@ -1,0 +1,7 @@
+<div *ngIf="mostrar">
+  <ul>
+    <li *ngFor="let nota of notas">
+      {{ nota.nombre_curso }} | {{ nota.nota }}
+    </li>
+  </ul>
+</div>

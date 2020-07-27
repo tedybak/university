@@ -1,7 +1,9 @@
 <div class="row">
   <div class="col s4">
     <div class="collection" *ngFor="let item of alumnos">
-      <a [routerLink]="[item.id]" class="collection-item"> {{item.nombre}} </a>
+      <a [routerLink]="[item.id]" class="collection-item">
+        {{ item.nombre }} {{ item.apellidos }}
+      </a>
     </div>
   </div>
 

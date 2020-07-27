@@ -1,17 +1,45 @@
-<br>
+<br />
 <nav>
   <div class="nav-wrapper">
-
-    <a [routerLink]="['/home']" class="brand-logo right" routerLinkActive="active">Universidade do Oeste de Santa
-      Catarina </a>
+    <a
+      [routerLink]="['/home']"
+      class="brand-logo right"
+      routerLinkActive="active"
+      >Universidad de Sevilla
+    </a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a [routerLink]="['/login']" routerLinkActive="active" *ngIf="!mostrarMenu">Login</a></li>
-      <li><a [routerLink]="['/cursos']" routerLinkActive="active" *ngIf="mostrarMenu">Cursos</a></li>
-      <li><a [routerLink]="['/alumnos']" routerLinkActive="active" *ngIf="mostrarMenu">Alumnos</a></li>
-      <li><a (click)="logout()" routerLinkActive="active" *ngIf="mostrarMenu">Logout</a></li>
+      <li>
+        <a
+          [routerLink]="['/login']"
+          routerLinkActive="active"
+          *ngIf="!mostrarMenu"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLink]="['/cursos']"
+          routerLinkActive="active"
+          *ngIf="mostrarMenu"
+          >Cursos</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLink]="['/alumnos']"
+          routerLinkActive="active"
+          *ngIf="mostrarMenu"
+          >Alumnos</a
+        >
+      </li>
+      <li>
+        <a (click)="logout()" routerLinkActive="active" *ngIf="mostrarMenu"
+          >Logout</a
+        >
+      </li>
     </ul>
   </div>
 </nav>
-<div class="ml-auto ml-3">
-  <img src="assets/img/unoesc.png">
+<div class="ml-auto ml-6 mt-2">
+  <img src="assets/img/unoesc.png" />
 </div>

@@ -1,7 +1,10 @@
 export interface Alumno {
-  id: number;
+  apellidos: string;
   nombre: string;
-  mmatricula: string;
-  nota: number;
-  nombrecurso: string;
+  fecha_nacimiento: string;
+  sexo: string;
+  direccion: string;
+  telefono: string;
+  email: string;
+  password: string;
 }

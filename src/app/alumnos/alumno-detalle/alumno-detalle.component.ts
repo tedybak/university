@@ -10,8 +10,8 @@ import { Alumno } from '../../interfaces/alumno.interface';
   styleUrls: ['./alumno-detalle.component.css'],
 })
 export class AlumnoDetalleComponent implements OnInit, OnDestroy {
-  id: number;
-  alumno: Alumno;
+  matricula: string;
+  alumno: any;
 
   inscripcion: Subscription;
 
@@ -23,10 +23,10 @@ export class AlumnoDetalleComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.inscripcion = this.route.paramMap.subscribe((params: ParamMap) => {
-      this.id = parseInt(params.get('id'));
-      this.alumnoService.getAlumnoById(this.id).subscribe((data) => {
-        //
-        this.alumno = data[0];
+      this.matricula = params.get('id');
+      this.alumnoService.getAlumnoById(this.matricula).subscribe((datos) => {
+        console.log(datos);
+        this.alumno = datos[0];
       });
     });
   }

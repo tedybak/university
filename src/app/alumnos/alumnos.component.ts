@@ -1,3 +1,5 @@
+import { Subscribable } from 'rxjs';
+import { Alumno } from './../interfaces/alumno.interface';
 import { Component, OnInit } from '@angular/core';
 import { AlumnosService } from './alumnos.service';
 
@@ -7,11 +9,12 @@ import { AlumnosService } from './alumnos.service';
   styleUrls: ['./alumnos.component.css'],
 })
 export class AlumnosComponent implements OnInit {
-  public alumnos: Object;
+  public alumnos: any;
   constructor(private alumnoService: AlumnosService) {}
 
-  ngOnInit(): void {
-    this.alumnoService.getAlumnos().subscribe((data) => (this.alumnos = data));
-    console.log(this.alumnos);
+  ngOnInit() {
+    this.alumnoService.getAlumnos().subscribe((datos) => {
+      this.alumnos = datos;
+    });
   }
 }

@@ -20,3 +20,7 @@
   z-index: 1;
   will-change: width, height;
 }
+
+img {
+  margin-top: 25px;
+}
