@@ -1,3 +1,4 @@
+import { NotRegisteredComponent } from './not-registered.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, CanActivate } from '@angular/router';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  {path:'not-registered', component: NotRegisteredComponent}
 ];
 
 @NgModule({

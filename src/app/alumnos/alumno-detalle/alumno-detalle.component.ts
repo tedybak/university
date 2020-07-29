@@ -25,7 +25,6 @@ export class AlumnoDetalleComponent implements OnInit, OnDestroy {
     this.inscripcion = this.route.paramMap.subscribe((params: ParamMap) => {
       this.matricula = params.get('id');
       this.alumnoService.getAlumnoById(this.matricula).subscribe((datos) => {
-        console.log(datos);
         this.alumno = datos[0];
       });
     });

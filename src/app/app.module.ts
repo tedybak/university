@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,10 +12,11 @@ import { RouterModule } from '@angular/router';
 import { AuthService } from './login/auth.service';
 import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './guards/auth.guard';
+import { NotRegisteredComponent } from './not-registered.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, NavbarComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, FormsModule],
+  declarations: [AppComponent, HomeComponent, LoginComponent, NavbarComponent, NotRegisteredComponent],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, FormsModule, HttpClientModule],
 
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent],
